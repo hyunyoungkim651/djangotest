@@ -1,5 +1,25 @@
 {% extends "base.html" %}
 
 {% block content %}
-<div>hello world, {{ name }}</div>
+<!-- <div style= "color : red; font-size:2em" >hello world, {{ name }}</div>
+<div style= "color : #123456;" >hello world, {{ name }}</div>
+<div style= "color : green;" >hello world, {{ name }}</div> -->
+
+<div class="container">
+  <div class="col-xs-6">
+    <div class="colorful-text">
+      <!-- <div class="colorful-text" >hello world, {{ name }}</div>
+      <div class="colorful-text">hello world, {{ name }}</div>
+      <div class="colorful-text">hello world, {{ name }}</div> -->
+        <!-- <div>hello world, {{ name }}</div> -->
+      <div>hello world, {{ name }}</div>
+      <div>hello world, {{ name }}</div>
+    </div>
+  </div>
+  <div class="col-xs-6">
+    {% for article in article_list %}
+      <div>{{ article.title }}</div>
+    {% endfor %}
+  </div>
+</div>
 {% endblock %}

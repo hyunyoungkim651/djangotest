@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 
-{% block content %}
+{% block body %}
 <!-- <div style= "color : red; font-size:2em" >hello world, {{ name }}</div>
 <div style= "color : #123456;" >hello world, {{ name }}</div>
 <div style= "color : green;" >hello world, {{ name }}</div> -->
@@ -18,8 +18,17 @@
   </div>
   <div class="col-xs-6">
     {% for article in article_list %}
-      <div>{{ article.title }}</div>
+      <div>
+        {{ article.title }}
+        <span class="label label-primary">{{ article.view_count }}</span>
+      </div>
     {% endfor %}
+  </div>
+  <div class="col-xs-12">
+    <i class="fa fa-stop" aria-hidden="true"></i>
+    <i class="fa fa-camera-retro"></i>
+    <i class="fa fa-play" aria-hidden="true"></i>
+    <i class="fa fa-play fa-spin" aria-hidden="true"></i>
   </div>
 </div>
 {% endblock %}
